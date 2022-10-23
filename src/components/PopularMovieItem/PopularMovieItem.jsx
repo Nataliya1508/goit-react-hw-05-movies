@@ -16,7 +16,7 @@ const PopularMoviesItem = ({movies}) => {
 
             <Link to={`movies/${movie.id}`} state={{ from: location }}>
 
-            {movie.title}
+            {movie.title || movie.name}
 
             </Link>
 
