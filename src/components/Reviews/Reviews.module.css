@@ -1,0 +1,18 @@
+.reviewsItem {
+  list-style: none;
+  padding: 20px;
+}
+
+.reviewsName {
+  font-size: 18px;
+
+  color: rgb(4, 43, 95);
+
+  text-decoration: underline;
+}
+
+.reviewsText {
+  font-size: 16px;
+
+  font-weight: 300;
+}

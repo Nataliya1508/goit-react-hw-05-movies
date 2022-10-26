@@ -1,0 +1,46 @@
+.castList {
+  padding: 20px 0px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+.castItem {
+  text-align: center;
+
+  list-style: none;
+
+  border: 1px solid rgb(27, 190, 240);
+  border-radius: 10px;
+
+  transition: 1s;
+}
+
+.castItem:hover {
+  transform: scale(0.9);
+}
+
+.castName {
+  color: rgb(25, 110, 238);
+
+  font-size: 25px;
+}
+
+.castCharacter {
+  font-size: 20px;
+}
+
+.castCharacterS {
+  font-weight: bold;
+}
+
+.detailsMessage {
+  color: rgb(49, 174, 247);
+
+  font-size: larger;
+}

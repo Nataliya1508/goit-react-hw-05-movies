@@ -1,0 +1,20 @@
+body {
+  background-color: rgba(245, 198, 198, 0.2);
+}
+
+h2 {
+  color: rgba(3, 4, 82, 0.8);
+  font-size: 36px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

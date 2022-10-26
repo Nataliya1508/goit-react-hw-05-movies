@@ -5,6 +5,10 @@ import { useSearchParams, } from 'react-router-dom';
 import { fetchSearchMovies } from 'services/moviesApi';
 import SearchBar from 'components/SearchBar/SearchBar';
 import PopularMovieItem from 'components/PopularMovieItem/PopularMovieItem';
+import styles from 'pages/Movies/Movies.module.css'
+
+import PropTypes from 'prop-types';
+
 
 
 const Movies = () => {
@@ -12,7 +16,6 @@ const Movies = () => {
     const [searchMovie, setSearchMovie] = useState([]);
     const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
-    // const location = useLocation();
     const [error, setError] = useState(null)
 
     const query = searchParams.get('query') || '';
@@ -58,10 +61,19 @@ const Movies = () => {
                
             </div>
    
-            <ul>{searchMovie && <PopularMovieItem movies={searchMovie} />}</ul>
+        <ul className={styles.list}>{searchMovie && <PopularMovieItem movies={searchMovie} />}</ul>
+        
+        
         </div>
     )
     
+}
+Movies.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+
+  }),
 }
 
 export default Movies;

@@ -10,7 +10,6 @@ export const fetchPopularMovies = async () => {
         throw new Error('Error, nothing found');
       
     }
-    // console.log(response.data)
     return response.data.results;
     
 };
@@ -32,16 +31,16 @@ export const fetchMoviesDetails = async (movieId) => {
     if (response.status !== 200) {
         throw new Error('Error, nothing found');
     }
-    return response.data.results;
+    return response.data;
 };
 
 export const getMovieCredits = async (id) => {
     const response = await axios.get(`${BASE_URL}movie/${id}/credits?api_key=${KEY}`)
-
+console.log(response)
     if (response.status !== 200) {
         throw new Error('Error, nothing found');
     }
-    return response.data.results;
+    return response.data.cast;
 }
 
 export const getMovieReviews  = async (movieId) => {

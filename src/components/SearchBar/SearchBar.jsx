@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Notiflix from "notiflix";
-// import styles from './SearchBar.module.css'
+import styles from './SearchBar.module.css'
 
 const SearchBar = ({ onSubmit, query }) => {
     const [value, setValue] = useState(query);
@@ -32,17 +32,16 @@ const SearchBar = ({ onSubmit, query }) => {
 
 
    return (
-    //   <header className={styles.Searchbar}>
-    //    <form className={styles.SearchForm} onSubmit={handleSubmit}>
-            <form onSubmit={handleSubmit}>
-           {/* <button type="submit" className={styles.SearchFormButton}> */}
-               <button type="submit">
+    
+            <form className={styles.form} onSubmit={handleSubmit}>
+           
+               <button className={styles.submit}type="submit">
                <span >
-                   {/* <span className={styles.SearchFormButtonLabel}> */}
+                  
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 viewBox="0 0 20 20"
               >
                 <title>search</title>
@@ -51,17 +50,22 @@ const SearchBar = ({ onSubmit, query }) => {
             </span>
           </button>
 
-           <input 
-            //    <input className={styles.SearchFormInput}
+           <input className={styles.inputField}
+           
             type="text"
             onChange={handleChange}
             autoComplete="off"
             autoFocus
-            placeholder="Search images and photos"
+            placeholder="Search images"
           />
         </form>
-    //   </header>
+    
     );
+}
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  query: PropTypes.string.isRequired,
 }
 
 export default SearchBar;
