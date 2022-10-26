@@ -17,7 +17,7 @@ const PopularMoviesItem = ({movies}) => {
 
             <Link
                 className={styles.listItemLink}
-                to={`movies/${movie.id}`} state={{ from: location }}>
+                to={`/movies/${movie.id}`} state={{ from: location }}>
 
             
                 <p className={styles.listItemTitle}>{movie.title || movie.name}</p>
