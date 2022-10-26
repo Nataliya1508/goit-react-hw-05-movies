@@ -29,7 +29,7 @@ const Reviews = () => {
 
     
     return reviews && reviews.length === 0 ? (
-        <p className={styles.detailsMessage}>   className=We don't have any reviews for this movie</p>) : (
+        <p className={styles.detailsMessage}>We don't have any reviews for this movie</p>) : (
         <div>
                 {reviews?.map(({ id, author, content }) =>
                     <li key={id} className={styles.reviewsItem}>
