@@ -6,12 +6,12 @@ const Navigation = () => {
         <>
         <nav className={styles.nav}>
                 <NavLink to="/" className={({ isActive }) =>
-                    (isActive ? `${styles.active}` : styles.link)}> 
+                    (isActive ? `${styles.active}` : styles.link)} end> 
            
                     Home
                 </NavLink>
                 <NavLink to="/movies" className={({ isActive }) =>
-                    (isActive ? `${styles.active}` : styles.link)}> 
+                    (isActive ? `${styles.active}` : styles.link)} end> 
            
                     Movies
                 </NavLink>
