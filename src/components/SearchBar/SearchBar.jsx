@@ -17,7 +17,7 @@ const SearchBar = ({ onSubmit, query }) => {
         }
 
 
-        onSubmit(value);
+        onSubmit(valueInput);
         reset();
     };
   

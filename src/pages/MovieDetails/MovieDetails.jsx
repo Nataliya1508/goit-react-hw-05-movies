@@ -21,8 +21,8 @@ const MovieDetails = () => {
 
     } = movieDetails;
 
-    const backLink = location.state ? location.state.form : '/';
-
+    // const backLink = location.state ? location.state.form : '/';
+const backLink = location.state?.from ?? '/movies';
 
     useEffect(() => {
         const fetchMovie = async () => {
